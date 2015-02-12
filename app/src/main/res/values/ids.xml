@@ -2,13 +2,13 @@
 <resources>
     <item type="id" name="mainActivityAboutButton" />
     <item type="id" name="mainActivityComposeButton" />
-    <item type="id" name="aboutActivityTextView" />
+    <item type="id" name="aboutActivityEditText" />
     <item type="id" name="aboutActivityHomeButton" />
     <item type="id" name="composeEmailActivityConfirmButton" />
     <item type="id" name="composeEmailActivityToFieldLabel" />
     <item type="id" name="composeEmailActivitySubjectFieldLabel" />
     <item type="id" name="composeEmailActivityMessageFieldLabel" />
-    <item type="id" name="confirmEmailActivityTextView" />
+    <item type="id" name="confirmEmailActivityEditText" />
     <item type="id" name="confirmEmailActivitySendButton" />
     <item type="id" name="confirmEmailActivityCancelButton" />
 </resources>

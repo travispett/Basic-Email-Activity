@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 
 public class AboutActivity extends ActionBarActivity {
@@ -16,8 +17,13 @@ public class AboutActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
+        EditText editText = (EditText)findViewById(R.id.aboutActivityEditText);
+        editText.setKeyListener(null);
+
         Resources res = getResources();
         String[] about = res.getStringArray(R.array.app_info);
+        for(int i = 0; i < about.length; i++)
+            editText.append(about[i] + "\n");
     }
 
 

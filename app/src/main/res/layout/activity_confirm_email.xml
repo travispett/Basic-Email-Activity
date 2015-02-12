@@ -9,11 +9,16 @@
     android:orientation="vertical"
     tools:context="com.pett.travis.tapthree.ConfirmEmailActivity">
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@id/confirmEmailActivityTextView" />
+        android:gravity="top"
+        android:id="@id/confirmEmailActivityEditText"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
 
     <LinearLayout
         android:layout_width="match_parent"

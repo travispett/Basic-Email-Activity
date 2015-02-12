@@ -10,6 +10,7 @@ import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +29,8 @@ public class ConfirmEmailActivity extends ActionBarActivity {
         String subject = extras.getString("subject_field");
         String message = extras.getString("message_field");
 
-        TextView confirm = (TextView)findViewById(R.id.confirmEmailActivityTextView);
+        EditText confirm = (EditText)findViewById(R.id.confirmEmailActivityEditText);
+        confirm.setKeyListener(null);
         confirm.setText("To: " + to + "\nSubject: " + subject + "\nMessage: " + message);
     }
 
