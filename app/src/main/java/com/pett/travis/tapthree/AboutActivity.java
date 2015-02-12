@@ -1,6 +1,7 @@
 package com.pett.travis.tapthree;
 
-import android.content.Intent;
+import android.content.res.Resources;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,19 +9,22 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class MainActivity extends ActionBarActivity {
+public class AboutActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_about);
+
+        Resources res = getResources();
+        String[] about = res.getStringArray(R.array.app_info);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_about, menu);
         return true;
     }
 
@@ -39,13 +43,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void startAboutActivity(View view) {
-        Intent intent = new Intent(this, AboutActivity.class);
-        startActivity(intent);
-    }
-
-    public void startComposeEmailActivity(View view) {
-        Intent intent = new Intent(this, ComposeEmailActivity.class);
-        startActivity(intent);
+    public void exitAboutActivity(View view) {
+        NavUtils.navigateUpFromSameTask(this);
     }
 }

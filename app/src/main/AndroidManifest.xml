@@ -16,6 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".ComposeEmailActivity"
+            android:label="@string/title_activity_compose_email" >
+        </activity>
+        <activity
+            android:name=".ConfirmEmailActivity"
+            android:label="@string/title_activity_confirm_email"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>

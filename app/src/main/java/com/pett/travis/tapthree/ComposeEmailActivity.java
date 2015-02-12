@@ -6,21 +6,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 
-public class MainActivity extends ActionBarActivity {
+public class ComposeEmailActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_compose_email);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_compose_email, menu);
         return true;
     }
 
@@ -39,13 +40,17 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void startAboutActivity(View view) {
-        Intent intent = new Intent(this, AboutActivity.class);
-        startActivity(intent);
-    }
+    public void startConfirmEmailActivity(View view) {
+        EditText toEditText = (EditText)findViewById(R.id.composeEmailActivityToFieldLabel);
+        EditText subjectEditText = (EditText)findViewById(R.id.composeEmailActivitySubjectFieldLabel);
+        EditText messageEditText = (EditText)findViewById(R.id.composeEmailActivityMessageFieldLabel);
 
-    public void startComposeEmailActivity(View view) {
-        Intent intent = new Intent(this, ComposeEmailActivity.class);
+        Intent intent = new Intent(this, ConfirmEmailActivity.class);
+
+        intent.putExtra("to_field", toEditText.getText().toString());
+        intent.putExtra("subject_field", subjectEditText.getText().toString());
+        intent.putExtra("message_field", messageEditText.getText().toString());
+
         startActivity(intent);
     }
 }

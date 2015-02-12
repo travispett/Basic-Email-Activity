@@ -7,23 +7,21 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context="com.pett.travis.tapthree.AboutActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/aboutActivityTextView"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="@string/about_button"
-        android:id="@id/mainActivityAboutButton"
-        android:onClick="startAboutActivity"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/mainActivityAboutButton"
-        android:text="@string/compose_button"
-        android:id="@id/mainActivityComposeButton"
-        android:onClick="startComposeEmailActivity"/>
+        android:layout_centerVertical="true"
+        android:id="@id/aboutActivityHomeButton"
+        android:text="@string/home_button"
+        android:onClick="exitAboutActivity"/>
 
 </RelativeLayout>
