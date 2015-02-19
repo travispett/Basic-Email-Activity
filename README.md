@@ -1,1 +1,1 @@
-# CS300-HW3
+Basic email app messing around with activities
